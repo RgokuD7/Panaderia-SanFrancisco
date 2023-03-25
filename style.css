@@ -1,21 +1,25 @@
 
 
-body{
-    padding-top: 0%;
-}
 nav .top{
     background-color: #fffdd0;
 
 }
+
 nav .img{
     width: 120px;
     height: 120px;
 }
+
 .buscar{
     justify-content: center;
     align-items: center;
 }
-#502b1b
+
+.titulo{
+    text-align: center;
+}
+
+background-color: #502b1b
 #fffdd0
 #ffpd59
 #c06138
