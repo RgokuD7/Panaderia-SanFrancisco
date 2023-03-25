@@ -11,8 +11,13 @@ nav .img{
 
 .buscar{
     justify-content: center;
-
+    align-items: center;
 }
+
+.titulo{
+    text-align: center;
+}
+
 #502b1b
 #fffdd0
 #ffpd59
