@@ -6,41 +6,41 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Marraqueta',
             precio: 3000,
-            imagen: '',
+            imagen: "img\\pan\\marraqueta.jpg",
             categoria: 1
         },
         {
             id: 2,
-            nombre: 'Hallula',
+            nombre: 'Hallulla',
             precio: 1.2,
-            imagen: 'cebolla.jpg',
+            imagen: "img\\pan\\hallulla.jpg",
             categoria: 1
         },
         {
             id: 3,
             nombre: 'Dobladitas',
             precio: 2.1,
-            imagen: 'calabacin.jpg',
+            imagen: "img\\pan\\dobladitas.jpg",
             categoria: 1
         },
         {
             id: 4,
             nombre: 'Ciabatta',
             precio: 0.6,
-            imagen: 'fresas.jpg',
+            imagen: "img\\pan\\ciabatta.jpg",
             categoria: 1
         },
         {
             id: 5,
             nombre: 'Baguette',
             precio: 0.6,
-            imagen: 'fresas.jpg',
+            imagen: "img\\pan\\baguette.jpg",
             categoria: 1
         },
         {    id: 6,
             nombre: 'Pan Masa Madre',
             precio: 3000,
-            imagen: '',
+            imagen: "img\\pan\\masamadre.jpg",
             categoria: 1
         },
         {    id: 7,
@@ -146,7 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Imagen
             const miNodoImagen = document.createElement('img');
             miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.setAttribute('src', info.imagen);
+            miNodoImagen.classList.add('img-card');
+            miNodoImagen.setAttribute("src", info.imagen);
+        
             // Precio
             const miNodoPrecio = document.createElement('p');
             miNodoPrecio.classList.add('card-text');
