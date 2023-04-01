@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {    id: 8,
             nombre: 'Queso de Horno',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/empanadas/quesohorno.jfif',
             categoria: 2
         },
         {    id: 9,
@@ -125,6 +125,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const DOMtotal = document.querySelector('#total');
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
     const miLocalStorage = window.localStorage;
+    if (currentPage == 'pan.html'){
+        tipoProducto = 1;
+    }
+    else if (currentPage == 'empanadas.html'){
+        tipoProducto = 2;
+    }
+    else if (currentPage == 'reposteria.html'){
+        tipoProducto = 3;
+    }
+
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', () => {
+    dropdown.querySelector('.dropdown-menu').classList.toggle('show');
+  });
+});
 
     // Funciones
 
@@ -160,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
             // Insertamos
-            if (info.categoria==1) {
+            if (info.categoria == tipoProducto) {
 
                 miNodoCardBody.appendChild(miNodoImagen);
                 miNodoCardBody.appendChild(miNodoTitle);
