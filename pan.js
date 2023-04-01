@@ -6,41 +6,41 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'Marraqueta',
             precio: 3000,
-            imagen: "img\\pan\\marraqueta.jpg",
+            imagen: "img/pan/marraqueta.jpg",
             categoria: 1
         },
         {
             id: 2,
             nombre: 'Hallulla',
             precio: 1.2,
-            imagen: "img\\pan\\hallulla.jpg",
+            imagen: "img/pan/hallulla.jpg",
             categoria: 1
         },
         {
             id: 3,
             nombre: 'Dobladitas',
             precio: 2.1,
-            imagen: "img\\pan\\dobladitas.jpg",
+            imagen: "img/pan/dobladitas.jpg",
             categoria: 1
         },
         {
             id: 4,
             nombre: 'Ciabatta',
             precio: 0.6,
-            imagen: "img\\pan\\ciabatta.jpg",
+            imagen: "img/pan/ciabatta.jpg",
             categoria: 1
         },
         {
             id: 5,
             nombre: 'Baguette',
             precio: 0.6,
-            imagen: "img\\pan\\baguette.jpg",
+            imagen: "img/pan/baguette.jpg",
             categoria: 1
         },
         {    id: 6,
             nombre: 'Pan Masa Madre',
             precio: 3000,
-            imagen: "img\\pan\\masamadre.jpg",
+            imagen: "img/pan/masamadre.jpg",
             categoria: 1
         },
         {    id: 7,
@@ -58,61 +58,61 @@ document.addEventListener('DOMContentLoaded', () => {
         {    id: 9,
             nombre: 'Queso Frita',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/empanadas/quesofrita.jpg',
             categoria: 2
         },
         {    id: 10,
             nombre: 'Camaron Queso Frita',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/empanadas/camaronquesofrita.jpg',
             categoria: 2
         },
         {    id: 11,
             nombre: 'Champiñon Queso Frita',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/empanadas/champinonquesofrita.jpg',
             categoria: 2
         },
         {    id: 12,
             nombre: 'Ostión Queso Frita',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/empanadas/ostionquesofrita.jpg',
             categoria: 2
         },
         {    id: 13,
             nombre: 'Churros',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/reposteria/churros.jpg',
             categoria: 3
         },
         {    id: 14,
             nombre: 'Tartaleta de Manzana',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/reposteria/tartaleta.jpg',
             categoria: 3
         },
         {    id: 15,
             nombre: 'Cupcake Vainilla',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/reposteria/cupcakevainilla.jpg',
             categoria: 3
         },
         {    id: 16,
             nombre: 'Cupcake Chocolate',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/reposteria/cupcakechocolate.jpg',
             categoria: 3
         },
         {    id: 17,
             nombre: 'Torta Mil Hojas',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/reposteria/tortamilhojas.jpg',
             categoria: 3
         },
         {    id: 18,
             nombre: 'Torta Selva Negra',
             precio: 3000,
-            imagen: '',
+            imagen: 'img/reposteria/tortaselvanegra.jpg',
             categoria: 3
         }
 
