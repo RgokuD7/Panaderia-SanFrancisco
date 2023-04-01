@@ -4,6 +4,7 @@ function validateForm() {
     var telefono = document.forms["myForm"]["telefono"].value;
     var empresa = document.forms["myForm"]["empresa"].value;
     var correo = document.forms["myForm"]["correo"].value;
+    var mensaje = document.forms["myForm"]["mensaje"].value;
 
     if (!/^[a-zA-Z]+$/.test(nombre)) {
         alert("Por favor, ingrese un nombre válido sin números.");
@@ -23,6 +24,10 @@ function validateForm() {
     }
     if (correo.indexOf("@") == -1) {
         alert("Por favor, ingrese un correo electrónico válido con el símbolo @.");
+        return false;
+    }
+    if (!/^[a-zA-Z\s]*$/.test(mensaje)) {
+        alert("Por favor, ingrese un mensaje.");
         return false;
     }
 }
