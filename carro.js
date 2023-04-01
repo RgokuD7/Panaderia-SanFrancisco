@@ -12,28 +12,28 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 2,
             nombre: 'Hallulla',
-            precio: 1.2,
+            precio: 3000,
             imagen: "img/pan/hallulla.jpg",
             categoria: 1
         },
         {
             id: 3,
             nombre: 'Dobladitas',
-            precio: 2.1,
+            precio: 3000,
             imagen: "img/pan/dobladitas.jpg",
             categoria: 1
         },
         {
             id: 4,
             nombre: 'Ciabatta',
-            precio: 0.6,
+            precio: 3000,
             imagen: "img/pan/ciabatta.jpg",
             categoria: 1
         },
         {
             id: 5,
             nombre: 'Baguette',
-            precio: 0.6,
+            precio: 3000,
             imagen: "img/pan/baguette.jpg",
             categoria: 1
         },
@@ -116,17 +116,36 @@ document.addEventListener('DOMContentLoaded', () => {
             categoria: 3
         }
 
-
     ];
 
-
     let carrito = [];
-    const divisa = '$';
+    const divisa = ' CLP';
     const DOMitems = document.querySelector('#items');
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
     const miLocalStorage = window.localStorage;
+    var currentPage = window.location.pathname.split("/").pop();
+    if (currentPage == 'pan.html'){
+        tipoProducto = 1;
+    }
+    else if (currentPage == 'empanadas.html'){
+        tipoProducto = 2;
+    }
+    else if (currentPage == 'reposteria.html'){
+        tipoProducto = 3;
+    }
+    else if (currentPage == 'carrito.html'){
+        tipoProducto = 4;
+    }
+
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', () => {
+    dropdown.querySelector('.dropdown-menu').classList.toggle('show');
+  });
+});
 
     // Funciones
 
@@ -148,7 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Imagen
             const miNodoImagen = document.createElement('img');
             miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.setAttribute('src', info.imagen);
+            miNodoImagen.classList.add('img-card');
+            miNodoImagen.setAttribute("src", info.imagen);
+        
             // Precio
             const miNodoPrecio = document.createElement('p');
             miNodoPrecio.classList.add('card-text');
@@ -160,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
             // Insertamos
-            if (info.categoria==2) {
+            if (info.categoria == tipoProducto || tipoProducto == 4) {
 
                 miNodoCardBody.appendChild(miNodoImagen);
                 miNodoCardBody.appendChild(miNodoTitle);
@@ -252,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             // Los sumamos al total
             return total + miItem[0].precio;
-        }, 0).toFixed(2);
+        }, 0);
     }
 
     /**

@@ -2,8 +2,6 @@ body{
     --bs-body-bg: #fffdd0;
     --bs-body-font-family: none;
 }
-
-
 .producto{
     padding: 20px;
     transition: transform 0.3s ease;
@@ -73,7 +71,11 @@ nav ul {
     text-decoration: none;
     color: #fffdd0;
   }
-  
+  nav li > a:hover{
+    text-decoration: none;
+    color: #c06138;
+  }
+
   nav .dropdown-menu {
     background-color: #502b1b;
     display: none;
