@@ -1,75 +1,82 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Panderia San Francisco </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="custom.scss">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="carro.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Panderia San Francisco </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="custom.scss">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="carro.js"></script>
 </head>
+
 <body>
   <nav class="top">
-    <div class="container-fluid " >
+    <div class="container-fluid ">
       <div class="row justify-content-between align-items-center">
         <div class="col">
           <img class="img" src="img/logo_estrecho.jpg" alt="LOGO">
         </div>
         <div class="col buscar">
-            <input type="search" placeholder="Buscar">
-            <button class="boton-buscar" type="submit">Buscar</button>
+          <input type="search" placeholder="Buscar">
+          <button class="boton-buscar" type="submit">Buscar</button>
         </div>
-      </div> 
+      </div>
     </div>
   </nav>
   <nav class="bottom">
-      <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li class="dropdown">
-          <a href="#">Productos</a>
-          <ul class="dropdown-menu">
-            <li><a href="pan.html">Pan</a></li>
-            <li><a href="empanadas.html">Empanadas</a></li>
-            <li><a href="reposteria.html">Reposteria</a></li>
-          </ul>
-        </li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="#">Productos</a>
+        <ul class="dropdown-menu">
+          <li><a href="pan.html">Pan</a></li>
+          <li><a href="empanadas.html">Empanadas</a></li>
+          <li><a href="reposteria.html">Reposteria</a></li>
+        </ul>
+      </li>
+      <li><a href="carrito.html">Carrito</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
   </nav>
-    <br>
-    <br>
-    
-      <div>
-        <h1 class="titulo">Empanadas</h1>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="container">
-        <div class="row">
-            <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="col-sm-8 row"></main>
-            <!-- Carrito -->
-            <aside class="col-sm-4">
-                <h2>Carrito</h2>
-                <!-- Elementos del carrito -->
-                <ul id="carrito" class="list-group"></ul>
-                <hr>
-                <!-- Precio total -->
-                <p class="text-right">Total: <span id="total"></span> CLP</p>
-                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-            </aside>
-        </div>
+  <br>
+  <br>
+
+  <div>
+    <h1 class="titulo">Empanadas</h1>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <!-- Elementos generados a partir del JSON -->
+      <main id="items" class="col-sm-8 row"></main>
+      <!-- Carrito -->
+      <aside class="col-sm-4">
+        <h2>Carrito</h2>
+        <!-- Elementos del carrito -->
+        <ul id="carrito" class="list-group"></ul>
+        <hr>
+        <!-- Precio total -->
+        <p class="text-right">Total: <span id="total"></span> CLP</p>
+        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+      </aside>
     </div>
-    </div>
-      <br>
-      <br>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </div>
+  </div>
+  <br>
+  <br>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
-    
