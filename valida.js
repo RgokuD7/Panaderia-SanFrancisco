@@ -22,7 +22,7 @@ function validateForm() {
         return false;
     }
     if (correo.indexOf("@") == -1) {
-        alert("Por favor, ingrese un correo electrónico válido con el símbolo @.");
+        alert("Por favor, ingrese un correo electrónico válido.");
         return false;
     }
 }
