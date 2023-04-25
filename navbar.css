@@ -1,3 +1,6 @@
+html{
+    display: flex;
+}
 .top {
     display: flex;
     background-color: #fffdd0;
@@ -12,7 +15,6 @@
     justify-content: center;
     align-items: center;
     background-color: #502b1b;
-    padding: 0% 20% 0px 20%;
     width: 100%;
 }
 .menu {
