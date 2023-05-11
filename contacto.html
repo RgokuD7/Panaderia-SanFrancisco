@@ -44,43 +44,62 @@
       <br>
       <br>
       
+
+      <div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Formulario de Contacto</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Rellena el siguiente formulario para contactarte con nosotros.
+                  Recuerda ingresar todos los datos de forma correcta antes de enviarlo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div >
-        <form id="miFormulario">
+        <form id="miFormulario" action="https://formsubmit.co/ca.gonzalez4@duocuc.cl" method="POST">
   
             <label>Nombre:</label><br>
-            <input type="text" id="itNombre"  class="campo" /><br />
+            <input type="text" id="itNombre"  class="campo" name="nombre" /><br />
             <div id="mensaje1" class="errores">Ingresa correctamente tu Nombre</div>
 
             <label>Apellido:</label><br>
-            <input type="text" id="itApellido"  class="campo" /><br />
+            <input type="text" id="itApellido"  class="campo" name="apellido" /><br />
             <div id="mensaje2" class="errores">Ingresa correctamente tu Apellido</div>
 
             <label>Celular:</label><br>
-            <input type="text" id="itCelular"  class="campo" /><br />
+            <input type="text" id="itCelular"  class="campo" name="celular" /><br />
             <div id="mensaje3" class="errores">Ingresa correctamente un Celular</div>
 
             <label>Empresa</label><br>
-            <input type="text" id="itEmpresa"  class="campo" /><br />
+            <input type="text" id="itEmpresa"  class="campo" name="empresa" /><br />
             <div id="mensaje4" class="errores">Ingresa correctamente la Empresa</div>
 
             <label>Correo electronico:</label><br />
-            <input type="text" id="itMail"  class="campo" /><br />
+            <input type="text" id="itMail"  class="campo" name="mail" /><br />
             <div id="mensaje5" class="errores">Ingresa correctamente un E-mail</div>
 
-            <label>Consulta:</label><br />
-            <input type="text" id="itConsulta"  class="campo" /><br />
-            <div id="mensaje6" class="errores">Escribe una Consulta</div>
+            <div class="row mb-3 col-6 mx-auto">
+              <label>Consulta:</label><br />
+              <textarea id="itConsulta" rows="4" class="campo" name="consulta" ></textarea>
+              <div id="mensaje6" class="errores">Escribe una Consulta</div>
+            </div>
 
         </form>
           
-
-
-
       <br>
       <br>
 
-      <div>
-        <input type="submit" id="bEnviar" value="Enviar datos" class="boton"/>
+      <div class="enviado">
+                                                          
+        <input type="submit" id="bEnviar" value="Enviar formulario" class="boton"/>
+        
       </div>
 
       <br>
