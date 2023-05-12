@@ -3,19 +3,23 @@
     background-color: #fffdd0;
     justify-content: center;
 }
+
 .logo {
     padding: 5px;
     width: 300px;
 }
+
 .bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #502b1b;
 }
+
 .menu {
     text-align: center;
 }
+
 nav .dropdownn-menu {
     background-color: #502b1b;
     display: none;
@@ -28,14 +32,17 @@ nav .dropdownn-menu {
     margin-top: 1px;
     padding: 10px;
     z-index: 1;
+
 }
 
 nav .dropdownn:hover .dropdownn-menu {
     display: flex;
     flex-direction: column;
     align-items: start;
-    
+
+
 }
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -66,7 +73,7 @@ nav li>a:hover {
 
     .menu {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         align-content: center;
@@ -83,6 +90,6 @@ nav li>a:hover {
         align-items: center;
         justify-content: center;
         padding: 0;
-        
+
     }
 }

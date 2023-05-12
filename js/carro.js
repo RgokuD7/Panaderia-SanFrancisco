@@ -142,9 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('click', () => {
-    dropdown.querySelector('.dropdown-menu').classList.toggle('show');
-  });
+        dropdown.addEventListener('click', () => {
+        dropdown.querySelector('.dropdown-menu').classList.toggle('show');
+    });
 });
 
     // Funciones
@@ -156,38 +156,32 @@ document.addEventListener('DOMContentLoaded', () => {
         baseDeDatos.forEach((info) => {
             // Estructura
             const miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-sm-4');
-            // Body
-            const miNodoCardBody = document.createElement('div');
-            miNodoCardBody.classList.add('card-body');
+            miNodo.classList.add('producto');
             // Titulo
             const miNodoTitle = document.createElement('h5');
-            miNodoTitle.classList.add('card-title');
+            miNodoTitle.classList.add('titulo');
             miNodoTitle.textContent = info.nombre;
             // Imagen
             const miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.classList.add('img-card');
             miNodoImagen.setAttribute("src", info.imagen);
         
             // Precio
             const miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
+            miNodoPrecio.classList.add('precio');
             miNodoPrecio.textContent = `${info.precio}${divisa}`;
             // Boton 
             const miNodoBoton = document.createElement('button');
-            miNodoBoton.classList.add('btn', 'btn-primary');
+            miNodoBoton.classList.add('btn-agregar');
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
             // Insertamos
             if (info.categoria == tipoProducto || tipoProducto == 4) {
 
-                miNodoCardBody.appendChild(miNodoImagen);
-                miNodoCardBody.appendChild(miNodoTitle);
-                miNodoCardBody.appendChild(miNodoPrecio);
-                miNodoCardBody.appendChild(miNodoBoton);
-                miNodo.appendChild(miNodoCardBody);
+                miNodo.appendChild(miNodoImagen);
+                miNodo.appendChild(miNodoTitle);
+                miNodo.appendChild(miNodoPrecio);
+                miNodo.appendChild(miNodoBoton);
                 DOMitems.appendChild(miNodo);
             }
         });

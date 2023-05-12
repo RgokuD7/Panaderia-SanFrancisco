@@ -3,14 +3,6 @@ body {
     --bs-body-bg: #fffdd0;
     overflow-x: hidden;
 }
-.producto {
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-.producto :hover {
-    transform: scale(1.1);
-}
 
 .buscar {
     text-align: right;
