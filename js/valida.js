@@ -38,7 +38,7 @@ $(document).ready(function(){
                                 $("#mensaje6").fadeIn();
                                 return false;
                             }else{
-                                $("#mensaje6").fadeOut();  
+                                $("#mensaje6").fadeOut();
                             }                          
                         }
                     }
