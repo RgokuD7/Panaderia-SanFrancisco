@@ -1,21 +1,17 @@
-html{
-    display: flex;
-}
 .top {
     display: flex;
     background-color: #fffdd0;
-    width: 100%;
     justify-content: center;
 }
 .logo {
     padding: 5px;
+    width: 300px;
 }
 .bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #502b1b;
-    width: 100%;
 }
 .menu {
     text-align: center;

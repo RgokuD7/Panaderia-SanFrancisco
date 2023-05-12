@@ -1,6 +1,7 @@
 
 body {
     --bs-body-bg: #fffdd0;
+    overflow-x: hidden;
 }
 .producto {
     padding: 20px;
