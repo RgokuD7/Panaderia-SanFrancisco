@@ -1,0 +1,47 @@
+
+
+#miFormulario{
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+
+}
+
+    
+.campo{
+    border: solid 4px #502b1b;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    text-align: left;
+}
+
+.boton{
+    background: #502b1b;
+    border: solid 0;
+    color: #fffdd0;
+    padding: 10px;
+}
+
+.errores{
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background: #502b1b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fffdd0;
+    display: none;
+    font-size: 14px;
+    margin-top: -60px;
+    margin-left: 840px;
+    padding: 10px;
+    position: absolute;
+}
+
+.enviado{
+    text-align: center;
+    
+}
+
