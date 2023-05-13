@@ -9,12 +9,13 @@
   <title>Panderia San Francisco </title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/productos.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" <script
-    src="https://kit.fontawesome.com/04a1e28817.js" crossorigin="anonymous">
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/04a1e28817.js" crossorigin="anonymous"></script>
   </script>
 </head>
 
@@ -50,22 +51,17 @@
   <br>
   <br>
   <br>
-  <div class="container">
-    <div class="row">
-      <!-- Elementos generados a partir del JSON -->
-      <main id="items" class="col-sm-8 row"></main>
-      <!-- Carrito -->
-      <aside class="col-sm-4">
-        <h2>Carrito</h2>
-        <!-- Elementos del carrito -->
-        <ul id="carrito" class="list-group"></ul>
-        <hr>
-        <!-- Precio total -->
-        <p class="text-right">Total: <span id="total"></span> CLP</p>
-        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-      </aside>
+  <div class="items-carro">
+    <div id="items"></div>
+    <div class="lista-carro">
+      <h2>Carrito</h2>
+      <!-- Elementos del carrito -->
+      <ul id="carrito" class="list-group"></ul>
+      <hr>
+      <!-- Precio total -->
+      <p class="text-right">Total: <span id="total"></span> CLP</p>
+      <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
     </div>
-  </div>
   </div>
   <footer>
     <div class="pie">
