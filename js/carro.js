@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             categoria: 2
         },
         {    id: 13,
-            nombre: 'Churros',
+            nombre: 'Churros con Azúcar',
             precio: 3000,
             imagen: 'img/reposteria/churros.jpg',
             categoria: 3
@@ -158,30 +158,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const miNodo = document.createElement('div');
             miNodo.classList.add('producto');
             // Titulo
-            const miNodoTitle = document.createElement('h5');
+            const miNodoTitle = document.createElement('h4');
             miNodoTitle.classList.add('titulo');
             miNodoTitle.textContent = info.nombre;
             // Imagen
             const miNodoImagen = document.createElement('img');
             miNodoImagen.setAttribute("src", info.imagen);
-        
+            const agregar = document.createElement('div');
+            agregar.classList.add('agregar');
             // Precio
-            const miNodoPrecio = document.createElement('p');
+            const miNodoPrecio = document.createElement('h5');
             miNodoPrecio.classList.add('precio');
             miNodoPrecio.textContent = `${info.precio}${divisa}`;
             // Boton 
             const miNodoBoton = document.createElement('button');
-            miNodoBoton.classList.add('btn-agregar');
-            miNodoBoton.textContent = '+';
+            miNodoBoton.classList.add('btn-agregar','fa-solid', 'fa-cart-arrow-down');
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
             // Insertamos
-            if (info.categoria == tipoProducto || tipoProducto == 4) {
-
+            if (info.categoria == tipoProducto || tipoProducto == 4) { 
                 miNodo.appendChild(miNodoImagen);
                 miNodo.appendChild(miNodoTitle);
-                miNodo.appendChild(miNodoPrecio);
-                miNodo.appendChild(miNodoBoton);
+                agregar.appendChild(miNodoPrecio)
+                agregar.appendChild(miNodoBoton)
+                miNodo.appendChild(agregar);
                 DOMitems.appendChild(miNodo);
             }
         });
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     function anyadirProductoAlCarrito(evento) {
         // Anyadimos el Nodo a nuestro carrito
-        carrito.push(evento.target.getAttribute('marcador'))
+        carrito.push(evento.target.getAttribute('marcador'));
         // Actualizamos el carrito 
         renderizarCarrito();
         // Actualizamos el LocalStorage

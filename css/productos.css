@@ -23,13 +23,8 @@
     align-items: center;
     width: 100%; 
     height: auto; 
-    border: solid 2px black;
-    border-radius: 1rem;
-    -webkit-border-radius: 1.2rem;
-    -moz-border-radius: 1.2rem;
-    -ms-border-radius: 1.2rem;
-    -o-border-radius: 1.2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+    border: solid 3px #502b1b;
+    box-shadow: 0 0 10px rgba(80, 43, 27, 0.5),
         0 5px 15px rgba(0, 0, 0, 0.2),
         5px 0 15px rgba(0, 0, 0, 0.2),
         -5px 0 15px rgba(0, 0, 0, 0.2),
@@ -40,8 +35,6 @@
     transform: scale(1.1);
 }
 .producto img{
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
     width: 100%; 
     height: auto;
 }
@@ -50,4 +43,32 @@
     #items {
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
-  }
+}
+
+.agregar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.titulo, .precio{
+    margin: 0;
+}
+
+.btn-agregar {
+    color: #fffdd0;
+    background-color: #502b1b;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+
+.btn-agregar:hover{
+    color: #502b1b;
+    background-color: #fffdd0;
+}
