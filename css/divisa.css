@@ -1,0 +1,13 @@
+.titulo-divisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.divisas{
+    color: #502b1b;
+    background-color: #fffdd0;
+    position: absolute;
+    right: 0;
+    margin: 0 15px;
+}
