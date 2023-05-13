@@ -9,6 +9,7 @@
   <title>Panderia San Francisco </title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/divisa.css">
   <link rel="stylesheet" href="css/productos.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -42,15 +43,11 @@
       </div>
     </nav>
   </header>
-  <br>
-  <br>
-  <div>
+  <br><br>
+  <div class="titulo-divisa">
     <h1 class="titulo">Panadería</h1>
+    <select class="divisas" id="divisa"></select>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
   <div class="items-carro">
     <div id="items"></div>
     <div class="lista-carro">
@@ -59,11 +56,9 @@
       <ul id="carrito" class="list-group"></ul>
       <hr>
       <!-- Precio total -->
-      <p class="text-right">Total: <span id="total"></span> CLP</p>
+      <p>Total: <span id="total"></span> <span id="div"></span></p>
       <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
     </div>
-  </div>
-
   </div>
   <footer>
     <div class="pie">
@@ -85,7 +80,9 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/divisas.js"></script>
   <script src="js/carro.js"></script>
+  
 </body>
 
 </html>
