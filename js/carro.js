@@ -179,8 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Precio
       const miNodoPrecio = document.createElement("h5");
       miNodoPrecio.classList.add("precio");
-      const precio = valorDivisa * info.precio;
-      miNodoPrecio.textContent = `${precio.toFixed(2)} ${divisa}`;
+      const precio = Math.round(valorDivisa * info.precio* 100) / 100;
+      var precioFinal = precio.toLocaleString("en-IN");
+      miNodoPrecio.textContent = `${precioFinal} ${divisa}`;
       // Boton
       const miNodoBoton = document.createElement("button");
       miNodoBoton.classList.add(
@@ -191,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
       miNodoBoton.setAttribute("marcador", info.id);
       miNodoBoton.addEventListener("click", anyadirProductoAlCarrito);
       // Insertamos
-      if (info.categoria == tipoProducto || tipoProducto == 4) {
+      if (info.categoria == tipoProducto) {
         miNodo.appendChild(miNodoImagen);
         miNodo.appendChild(miNodoTitle);
         agregar.appendChild(miNodoPrecio);
@@ -234,23 +235,31 @@ document.addEventListener("DOMContentLoaded", () => {
         return itemId === item ? (total += 1) : total;
       }, 0);
       // Creamos el nodo del item del carrito
+      var precioFinal = Math.round(miItem[0].precio * valorDivisa * 100) / 100;
+      precioFinal = precioFinal.toLocaleString("en-IN");
       const miNodo = document.createElement("li");
-      miNodo.classList.add("list-group-item", "text-right", "mx-2");
-      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${(miItem[0].precio * valorDivisa).toFixed(2)} ${divisa}`;
+      miNodo.classList.add("item-carrito");
+      const totalItem = document.createElement("p");
+      totalItem.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${precioFinal} ${divisa}`;
+      miNodo.appendChild(totalItem);
       // Boton de borrar
       const miBoton = document.createElement("button");
-      miBoton.classList.add("btn", "btn-danger", "mx-5");
-      miBoton.textContent = "X";
-      miBoton.style.marginLeft = "1rem";
+      miBoton.classList.add("btn-eliminar", "fa-solid", "fa-trash");
       miBoton.dataset.item = item;
       miBoton.addEventListener("click", borrarItemCarrito);
+      if (tipoProducto == 4) {
+        const imagen = document.createElement("img");
+        imagen.setAttribute("src", miItem[0].imagen);
+        miNodo.appendChild(imagen);
+      }
       // Mezclamos nodos
+
       miNodo.appendChild(miBoton);
       DOMcarrito.appendChild(miNodo);
     });
     // Renderizamos el precio total en el HTML
-    $('#div').html(divisa)
-    DOMtotal.textContent = calcularTotal();
+    $("#div").html(divisa);
+    DOMtotal.textContent = calcularTotal().toLocaleString("en-IN");
   }
 
   /**
@@ -280,7 +289,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return itemBaseDatos.id === parseInt(item);
       });
       // Los sumamos al total
-      return total + ((miItem[0].precio).toFixed(2) * valorDivisa);
+      var totalCarro =
+        Math.round((total + miItem[0].precio * valorDivisa) * 100) / 100;
+      return totalCarro;
     }, 0);
   }
 
@@ -327,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       var valorDivisa = 1;
     }
-    return {divisa, valorDivisa};
+    return { divisa, valorDivisa };
   }
 
   function cargarCarritoDeLocalStorage() {
@@ -343,6 +354,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inicio
   cargarCarritoDeLocalStorage();
-  renderizarProductos();
+  if (tipoProducto != 4) {
+    renderizarProductos();
+  }
   renderizarCarrito();
 });

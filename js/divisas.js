@@ -12,9 +12,9 @@ $(document).ready(function () {
   }
   cargarDivisa();
   $.get(
-    "https://api.fastforex.io/fetch-all?from=CLP&api_key=304cd94304-b2b9b338cf-rukn9q",
+    "https://api.apilayer.com/exchangerates_data/latest?&base=clp&apikey=Q1exC7SAvRnriSeSLUqW7ziTlZUn2hxV",
     function (data) {
-      $.each(data.results, function (i, item) {
+      $.each(data.rates, function (i, item) {
         if (i == cargarDivisa()) {
           $(".divisas").append(
             '<option value="' + item + '"selected>' + i + "</option>"

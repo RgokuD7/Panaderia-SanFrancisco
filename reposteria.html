@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/productos.css">
+  <link rel="stylesheet" href="css/carrito.css">
   <link rel="stylesheet" href="css/divisa.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -54,11 +55,13 @@
     <div class="lista-carro">
       <h2>Carrito</h2>
       <!-- Elementos del carrito -->
-      <ul id="carrito" class="list-group"></ul>
-      <hr>
+      <ul id="carrito"></ul>
       <!-- Precio total -->
-      <p>Total: <span id="total"></span> <span id="div"></span></p>
-      <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+      <div class="total-carro">
+        <p>Total: <span id="total"></span> <span id="div"></span></p>
+        <button id="boton-vaciar">Vaciar</button>
+      </div>
+    </div>
     </div>
   </div>
   <footer>

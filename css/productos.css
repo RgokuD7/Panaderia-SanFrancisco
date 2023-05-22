@@ -9,11 +9,10 @@
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     justify-items: center;
     grid-gap: 1.5rem;
-    padding: 40px;
+    padding: 20px;
 }
 .lista-carro{
     flex: 1 0 30%;
-    padding: 5%;
 }
 .producto {
     background-color: #fffdd0;
