@@ -214,6 +214,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
   }
+  function eliminarItemCarrito(evento) {
+    // Obtenemos el producto ID que hay en el botón pulsado
+    const id = evento.target.dataset.item;
+    // Buscamos el índice del elemento a eliminar en el carrito
+    const index = carrito.findIndex((carritoId) => carritoId === id);
+    // Si se encuentra el elemento, lo eliminamos del carrito
+    if (index !== -1) {
+      carrito.splice(index, 1);
+    }
+    // volvemos a renderizar
+    renderizarCarrito();
+    // Actualizamos el LocalStorage
+    guardarCarritoEnLocalStorage();
+  }
   /**
    * Dibuja todos los productos guardados en el carrito
    */
@@ -241,7 +255,17 @@ document.addEventListener("DOMContentLoaded", () => {
       miNodo.classList.add("item-carrito");
       const totalItem = document.createElement("p");
       totalItem.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${precioFinal} ${divisa}`;
-      miNodo.appendChild(totalItem);
+      
+      // Boton de agregar
+      const botonAgregar = document.createElement("button");
+      botonAgregar.classList.add("btn-agregar", "fa-solid", "fa-plus");
+      botonAgregar.setAttribute("marcador", item);
+      botonAgregar.addEventListener("click", anyadirProductoAlCarrito);
+      // Boton de eliminar
+      const botonEliminar = document.createElement("button");
+      botonEliminar.classList.add("btn-eliminar", "fa-solid", "fa-minus");
+      botonEliminar.dataset.item = item;
+      botonEliminar.addEventListener("click", eliminarItemCarrito);
       // Boton de borrar
       const miBoton = document.createElement("button");
       miBoton.classList.add("btn-eliminar", "fa-solid", "fa-trash");
@@ -253,7 +277,9 @@ document.addEventListener("DOMContentLoaded", () => {
         miNodo.appendChild(imagen);
       }
       // Mezclamos nodos
-
+      miNodo.appendChild(totalItem);
+      miNodo.appendChild(botonAgregar);
+      miNodo.appendChild(botonEliminar);
       miNodo.appendChild(miBoton);
       DOMcarrito.appendChild(miNodo);
     });
@@ -277,7 +303,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
   }
-
   /**
    * Calcula el precio total teniendo en cuenta los productos repetidos
    */
